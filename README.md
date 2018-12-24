@@ -4,7 +4,7 @@ This project is using [keras-vggface](https://github.com/rcmalli/keras-vggface) 
 <br/>
 Below are few screenshots demonstrating how it works.
 <br/>
-Keras model was converted to CoreML, and is used directly on iOS device.
+Keras vggface model was converted to CoreML, and is used directly on iOS device.
 <p float="center">
   <img src="https://raw.githubusercontent.com/pavel-zh/face-id/master/sample-screens/screen1.png" width="250" hspace="50"/>
   <img src="https://raw.githubusercontent.com/pavel-zh/face-id/master/sample-screens/screen2.png" width="250"  hspace="50"/> 
