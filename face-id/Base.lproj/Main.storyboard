@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="face_id" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="2pS-10-EjC">
+                                <rect key="frame" x="0.0" y="20" width="375" height="557"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="5" minimumInteritemSpacing="5" id="V9L-Rx-Lcj">
+                                    <size key="itemSize" width="81" height="79"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="photoCellId" id="gEs-4y-9Fi" customClass="PhotoCell" customModule="face_id" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="81" height="79"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="81" height="79"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uqi-n4-iIF">
+                                                    <rect key="frame" x="0.0" y="0.0" width="81" height="79"/>
+                                                </imageView>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="uqi-n4-iIF" firstAttribute="leading" secondItem="gEs-4y-9Fi" secondAttribute="leading" id="cr1-mN-yll"/>
+                                            <constraint firstItem="uqi-n4-iIF" firstAttribute="top" secondItem="gEs-4y-9Fi" secondAttribute="top" id="mb7-b2-x0E"/>
+                                            <constraint firstAttribute="bottom" secondItem="uqi-n4-iIF" secondAttribute="bottom" id="r8U-PE-Jbb"/>
+                                            <constraint firstAttribute="trailing" secondItem="uqi-n4-iIF" secondAttribute="trailing" id="z72-9l-hSd"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="photoView" destination="uqi-n4-iIF" id="0gF-47-l7i"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="8Nx-KP-Cr7"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="itj-Gb-LnB"/>
+                                </connections>
+                            </collectionView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="WZx-r5-awl">
+                                <rect key="frame" x="0.0" y="577" width="375" height="90"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UeA-SR-yVK">
+                                        <rect key="frame" x="0.0" y="0.0" width="75" height="90"/>
+                                        <state key="normal" image="vb1"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                                                <color key="value" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="faceSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QOB-uW-J2i"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QmG-sm-gvp">
+                                        <rect key="frame" x="75" y="0.0" width="75" height="90"/>
+                                        <state key="normal" image="vb1"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                                                <color key="value" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="faceSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2ia-ux-r4Z"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nNn-3f-sZm">
+                                        <rect key="frame" x="150" y="0.0" width="75" height="90"/>
+                                        <state key="normal" image="vb1"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                                                <color key="value" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="faceSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pz1-Kg-M2p"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8OX-4X-bIg">
+                                        <rect key="frame" x="225" y="0.0" width="75" height="90"/>
+                                        <state key="normal" image="vb1"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                                                <color key="value" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="faceSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oPF-pg-cOC"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r6t-wE-3L7">
+                                        <rect key="frame" x="300" y="0.0" width="75" height="90"/>
+                                        <state key="normal" image="vb1"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                                                <color key="value" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="faceSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YSe-gw-yBp"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="90" id="QDK-0X-6OD"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2pS-10-EjC" secondAttribute="trailing" id="0Zz-S0-XKd"/>
+                            <constraint firstItem="WZx-r5-awl" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="19y-GP-F8R"/>
+                            <constraint firstItem="WZx-r5-awl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="AwZ-Xj-pZQ"/>
+                            <constraint firstItem="WZx-r5-awl" firstAttribute="top" secondItem="2pS-10-EjC" secondAttribute="bottom" id="QhQ-4V-BoO"/>
+                            <constraint firstItem="2pS-10-EjC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="c1w-Mj-FwX"/>
+                            <constraint firstItem="2pS-10-EjC" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="dxy-ql-5pU"/>
+                            <constraint firstItem="WZx-r5-awl" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="g67-9s-lkI"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="facesCollectionView" destination="2pS-10-EjC" id="H5c-Oo-vBL"/>
+                        <outletCollection property="faceSelectorButtons" destination="UeA-SR-yVK" collectionClass="NSMutableArray" id="hDO-V4-YDw"/>
+                        <outletCollection property="faceSelectorButtons" destination="QmG-sm-gvp" collectionClass="NSMutableArray" id="LHT-za-RkO"/>
+                        <outletCollection property="faceSelectorButtons" destination="nNn-3f-sZm" collectionClass="NSMutableArray" id="Ncc-Mk-Vu3"/>
+                        <outletCollection property="faceSelectorButtons" destination="8OX-4X-bIg" collectionClass="NSMutableArray" id="3zM-pj-kod"/>
+                        <outletCollection property="faceSelectorButtons" destination="r6t-wE-3L7" collectionClass="NSMutableArray" id="jks-sN-264"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="vb1" width="311" height="310"/>
+    </resources>
+</document>
