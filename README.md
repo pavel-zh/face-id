@@ -24,5 +24,5 @@ model = VGGFace(model='resnet50', include_top=False,
 coreml_model = coremltools.converters.keras.convert(model,
                                                     input_names="image",
                                                     image_input_names="image")
-coreml_model.save("face-id-resnet50.mlmodel")
+coreml_model.save("vggface-resnet50.mlmodel")
 ```
