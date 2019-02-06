@@ -30,7 +30,7 @@ class FaceIdService {
                 completion(nil)
                 return
             }
-            guard let faceIdmodel = try? VNCoreMLModel(for: FaceId_resnet50_1().model) else {
+            guard let faceIdmodel = try? VNCoreMLModel(for: FaceId_resnet50_quantized_1().model) else {
                 completion(nil)
                 return
             }

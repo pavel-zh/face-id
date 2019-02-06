@@ -13,6 +13,7 @@
 		9020129A21D01DBB00638507 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9020129921D01DBB00638507 /* Assets.xcassets */; };
 		9020129D21D01DBB00638507 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9020129B21D01DBB00638507 /* LaunchScreen.storyboard */; };
 		902012A521D01FC500638507 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902012A421D01FC500638507 /* PhotoCell.swift */; };
+		90461A09220B58E900791008 /* FaceId-resnet50-quantized.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 90461A08220B58E900791008 /* FaceId-resnet50-quantized.mlmodel */; };
 		9050740E21D026FB002D5D6B /* FaceId-vgg16.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 9050740C21D026FB002D5D6B /* FaceId-vgg16.mlmodel */; };
 		9050741021D0366E002D5D6B /* FaceIdService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9050740F21D0366E002D5D6B /* FaceIdService.swift */; };
 		9050741621D05910002D5D6B /* FaceId-resnet50.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 9050741521D05910002D5D6B /* FaceId-resnet50.mlmodel */; };
@@ -27,6 +28,7 @@
 		9020129C21D01DBB00638507 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9020129E21D01DBB00638507 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		902012A421D01FC500638507 /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
+		90461A08220B58E900791008 /* FaceId-resnet50-quantized.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = "FaceId-resnet50-quantized.mlmodel"; sourceTree = "<group>"; };
 		9050740C21D026FB002D5D6B /* FaceId-vgg16.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = "FaceId-vgg16.mlmodel"; sourceTree = "<group>"; };
 		9050740F21D0366E002D5D6B /* FaceIdService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceIdService.swift; sourceTree = "<group>"; };
 		9050741521D05910002D5D6B /* FaceId-resnet50.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = "FaceId-resnet50.mlmodel"; sourceTree = "<group>"; };
@@ -71,6 +73,7 @@
 				9020129B21D01DBB00638507 /* LaunchScreen.storyboard */,
 				9020129E21D01DBB00638507 /* Info.plist */,
 				9050741521D05910002D5D6B /* FaceId-resnet50.mlmodel */,
+				90461A08220B58E900791008 /* FaceId-resnet50-quantized.mlmodel */,
 				9050740C21D026FB002D5D6B /* FaceId-vgg16.mlmodel */,
 			);
 			path = "face-id";
@@ -164,6 +167,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90461A09220B58E900791008 /* FaceId-resnet50-quantized.mlmodel in Sources */,
 				9050741621D05910002D5D6B /* FaceId-resnet50.mlmodel in Sources */,
 				9020129521D01DBA00638507 /* ViewController.swift in Sources */,
 				9020129321D01DBA00638507 /* AppDelegate.swift in Sources */,
@@ -316,7 +320,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = A3AV236JMA;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -326,7 +330,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.somecompany.faceid;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.care.face-id";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -338,7 +342,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = A3AV236JMA;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -348,7 +352,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.somecompany.faceid;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.care.face-id";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
