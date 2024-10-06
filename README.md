@@ -26,7 +26,7 @@ model = VGGFace(
 coreml_model = coremltools.converters.keras.convert(
   model,
   input_names="image",
-  image_input_names="image")
-  coreml_model.save("vggface-resnet50.mlmodel"
+  image_input_names="image"
 )
+coreml_model.save("vggface-resnet50.mlmodel")
 ```
