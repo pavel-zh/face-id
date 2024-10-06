@@ -18,11 +18,15 @@ Keras vggface model was converted to CoreML, and is used directly on iOS device.
 Converting Keras model to coreml:
 
 ```python
-model = VGGFace(model='resnet50', include_top=False,
-                input_shape=(224, 224, 3),
-                pooling='avg')
-coreml_model = coremltools.converters.keras.convert(model,
-                                                    input_names="image",
-                                                    image_input_names="image")
-coreml_model.save("vggface-resnet50.mlmodel")
+model = VGGFace(
+  model='resnet50', include_top=False,
+  input_shape=(224, 224, 3),
+  pooling='avg'
+)
+coreml_model = coremltools.converters.keras.convert(
+  model,
+  input_names="image",
+  image_input_names="image")
+  coreml_model.save("vggface-resnet50.mlmodel"
+)
 ```
